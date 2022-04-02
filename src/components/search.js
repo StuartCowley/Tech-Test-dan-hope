@@ -1,14 +1,21 @@
-// eslint-disable-next-line no-unused-vars
 import React, { useState } from "react";
 import "../styles/search.css";
 
 // eslint-disable-next-line react/function-component-definition
 const Search = () => {
+  // eslint-disable-next-line no-unused-vars
+  const [value, setValue] = useState("");
   return (
-    <>
-      <div className="search-input" />
-      <input type="text" />
-    </>
+    <form className="search-form">
+      <input
+        className="search-input"
+        type="text"
+        onChange={(e) => setValue(e.target.value)}
+      />
+      <button className="search-button" type="submit">
+        Search
+      </button>
+    </form>
   );
 };
 
