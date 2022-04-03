@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import "../styles/search.css";
+import PropTypes from "prop-types";
 import getImages from "../requests/getImages";
 
 // eslint-disable-next-line react/function-component-definition
-const Search = () => {
+const Search = ({ setSearchResults }) => {
   const [value, setValue] = useState("");
   const handleSubmit = (event) => {
     event.preventDefault();
-    getImages(value);
+    setSearchResults(getImages(value));
   };
   return (
     <div className="Search">
@@ -26,3 +27,7 @@ const Search = () => {
 };
 
 export default Search;
+
+Search.propTypes = {
+  setSearchResults: PropTypes.func.isRequired,
+};
