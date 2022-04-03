@@ -6,9 +6,9 @@ import getImages from "../requests/getImages";
 // eslint-disable-next-line react/function-component-definition
 const Search = ({ setSearchResults }) => {
   const [value, setValue] = useState("");
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    setSearchResults(getImages(value));
+    setSearchResults(await getImages(value));
   };
   return (
     <div className="Search">

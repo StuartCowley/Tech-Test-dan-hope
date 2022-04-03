@@ -5,7 +5,8 @@ import SearchResults from "./SearchResults";
 
 function App() {
   // eslint-disable-next-line no-unused-vars
-  const [searchResults, setSearchResults] = useState("");
+  const [searchResults, setSearchResults] = useState([]);
+
   return (
     <div className="App">
       <img
