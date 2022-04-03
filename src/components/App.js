@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "../styles/App.css";
-import Search from "./search";
+import Search from "./Search";
+import SearchResults from "./SearchResults";
 
 function App() {
   // eslint-disable-next-line no-unused-vars
@@ -13,6 +14,7 @@ function App() {
         alt="logo"
       />
       <Search setSearchResults={setSearchResults} />
+      <SearchResults />
     </div>
   );
 }
