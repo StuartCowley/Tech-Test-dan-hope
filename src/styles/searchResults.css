@@ -1,0 +1,19 @@
+.space-image{
+    display: flex;
+    justify-items: auto;
+    width: 30%;
+    height: 50%;
+    margin: auto;
+    padding: 5px;
+}
+
+.para{
+    display: flex;
+    justify-content: center;
+}
+
+.all-images{
+    display: grid;
+    flex-flow: wrap;
+    margin: auto;
+}

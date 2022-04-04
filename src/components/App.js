@@ -4,7 +4,6 @@ import Search from "./Search";
 import SearchResults from "./SearchResults";
 
 function App() {
-  // eslint-disable-next-line no-unused-vars
   const [searchResults, setSearchResults] = useState([]);
 
   return (
@@ -15,7 +14,7 @@ function App() {
         alt="logo"
       />
       <Search setSearchResults={setSearchResults} />
-      <SearchResults />
+      <SearchResults results={searchResults} />
     </div>
   );
 }
