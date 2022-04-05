@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 // eslint-disable-next-line react/function-component-definition
 const SearchResults = ({ results }) => {
   if (!results.length) {
-    return <p>No results</p>;
+    return <p className="para-fail">No results</p>;
     // eslint-disable-next-line no-else-return
   } else {
     return (
@@ -13,7 +13,6 @@ const SearchResults = ({ results }) => {
         {results.map((image) => (
           <>
             <div className="all-images" />
-            <p className="para">Search Results</p>
             <img className="space-image" src={image} alt="mock" key={image} />
           </>
         ))}
